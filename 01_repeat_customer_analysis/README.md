@@ -23,22 +23,14 @@ Customers are classified based on purchase frequency:
 - repeat customers = 2 or more orders
 - one-time customers = 1 order
 
----
-
 ### 2. Data preparation
 Order data is enriched with product information and customer segment classification to enable product-level analysis of repeat customers.
-
----
 
 ### 3. Analysis scope
 The analysis focuses exclusively on repeat customer transactions to isolate their contribution to revenue.
 
----
-
 ### 4. Revenue calculation
 Revenue is calculated at the product level based on repeat customer purchases.
-
----
 
 ### 5. Ranking
 Products are ranked by total repeat customer revenue and their contribution to overall repeat revenue is calculated.
