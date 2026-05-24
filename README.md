@@ -1,8 +1,6 @@
 # BI Portfolio
 
-This repository contains a set of small analytics projects focused on SQL-based business analysis. Each project explores a specific business question using structured data models and simple analytical logic.
-
-The goal is to practice real-world BI thinking: defining metrics, working with relational data, and translating business questions into SQL analysis.
+SQL-based analytics projects focused on business questions, data modeling, and KPI definition.
 
 ---
 
