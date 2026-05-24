@@ -2,19 +2,17 @@
 
 ## Project overview
 
-This analysis looks at which products generate the most revenue from repeat customers and whether that revenue is concentrated in a small number of products or spread across the catalog.
-
-The goal is to understand which products are most important for repeat customer spending.
+This analysis examines how revenue from repeat customers is distributed across products. The goal is to understand whether repeat customer spending is concentrated in a small number of products or spread across the catalog.
 
 ---
 
 ## Data
 
-The dataset includes three tables:
+The analysis uses order-level transaction data combined with product and customer information.
 
-- **orders**: order_id, customer_id, product_id, order_date, amount  
-- **products**: product_id, product_name  
-- **customer_segments**: derived from order history to classify customers
+- **Orders**: transactional purchase data
+- **Products**: product reference information
+- **Customer segmentation**: derived from purchase frequency
 
 ---
 
@@ -27,25 +25,23 @@ Customers are classified based on purchase frequency:
 
 ---
 
-### 2. Data enrichment
-Orders are enriched with:
-- product information
-- customer segment
+### 2. Data preparation
+Order data is enriched with product information and customer segment classification to enable product-level analysis of repeat customers.
 
 ---
 
-### 3. Analysis focus
-The analysis focuses only on repeat customer transactions.
+### 3. Analysis scope
+The analysis focuses exclusively on repeat customer transactions to isolate their contribution to revenue.
 
 ---
 
 ### 4. Revenue calculation
-Revenue is calculated per product for repeat customers.
+Revenue is calculated at the product level based on repeat customer purchases.
 
 ---
 
 ### 5. Ranking
-Products are ranked by repeat customer revenue, and each product’s share of total repeat revenue is calculated.
+Products are ranked by total repeat customer revenue and their contribution to overall repeat revenue is calculated.
 
 ---
 
@@ -57,14 +53,14 @@ All SQL logic is available in `analysis.sql`.
 
 ## Key findings
 
-- Revenue from repeat customers is concentrated in a small number of products  
-- Repeat customers do not distribute their spending evenly across products  
-- Some products contribute disproportionately to customer retention and revenue  
+- Repeat customer revenue is concentrated in a limited number of products  
+- Spending is not evenly distributed across the product catalog  
+- A small set of products drives a disproportionate share of repeat customer revenue  
 
 ---
 
 ## Next steps
 
-- Analyze trends over time (monthly repeat revenue)
-- Explore cohort behavior of repeat customers
-- Identify products linked to customer retention
+- Analyze repeat revenue trends over time
+- Build cohort-based repeat customer analysis
+- Identify product patterns linked to customer retention
